@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -23,10 +25,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility(JavaVersion.VERSION_1_8)
+        targetCompatibility(JavaVersion.VERSION_1_8)
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -34,16 +40,28 @@ android {
 
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation Dependencies.coreKtx
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation(project(":core"))
+
+    implementation (Dependencies.coreKtx)
+    implementation (Dependencies.jetbrainsKt)
+    implementation (Dependencies.appCompatKt)
+    implementation (Dependencies.androidMaterial)
+    implementation (Dependencies.constraintLayout)
 
     implementation(Dependencies.viewModel)
     implementation(Dependencies.liveData)
+    implementation(Dependencies.retrofitKt)
+    implementation(Dependencies.coroutinesKt)
 
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation(Dependencies.hilt)
+    implementation(Dependencies.viewModel)
+    kapt(Dependencies.hiltCompiler)
+
+    implementation(Dependencies.roomRuntime)
+    kapt(Dependencies.roomCompile)
+
+    testImplementation(TestDependencies.coreJunit)
+    androidTestImplementation(TestDependencies.junit)
+    androidTestImplementation(TestDependencies.espresso)
+
 }

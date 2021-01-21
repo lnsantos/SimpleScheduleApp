@@ -1,1 +1,1 @@
-C:\Users\MAIN\Desktop\SimpleScheduleApp\buildSrc\build\classes\kotlin\main\Dependencies.class;C:\Users\MAIN\Desktop\SimpleScheduleApp\buildSrc\build\classes\kotlin\main\Versions.class
+C:\Users\MAIN\Desktop\SimpleScheduleApp\buildSrc\build\classes\kotlin\main\Dependencies.class;C:\Users\MAIN\Desktop\SimpleScheduleApp\buildSrc\build\classes\kotlin\main\TestDependencies.class;C:\Users\MAIN\Desktop\SimpleScheduleApp\buildSrc\build\classes\kotlin\main\Versions$Testing.class;C:\Users\MAIN\Desktop\SimpleScheduleApp\buildSrc\build\classes\kotlin\main\Versions.class
