@@ -9,6 +9,13 @@ object Dependencies {
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraint}"
     const val retrofitKt = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val coroutinesKt = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
-    const val roomDataBase = "androidx.room:room-runtime:${Versions.room}"
-    const val daggerHilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+
+    const val hilt = "com.google.dagger:hilt-android:${Versions.daggerHilt}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.daggerHilt}"
+    const val viewModelHilt = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.viewModelHilt}"
+
+    const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
+    const val roomCompile = "androidx.room:room-compiler:${Versions.room}"
+
+
 }

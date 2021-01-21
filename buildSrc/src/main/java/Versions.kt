@@ -11,4 +11,11 @@ object Versions {
     const val coroutines = "1.3.9"
     const val room = "2.2.6"
     const val hilt = "2.28-alpha"
+    const val daggerHilt = "2.28-alpha"
+    const val viewModelHilt = "1.0.0-alpha02"
+
+    object Testing{
+        const val junit = "1.1.2"
+        const val expreso = "3.3.0"
+    }
 }
